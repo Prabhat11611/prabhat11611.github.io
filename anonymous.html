@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="anonymous.css">
+    <link rel="icon" href="Images/Logo_1.png" type="image/png">
+    <title>Prabhat Kumar</title>
+  </head>
+  <body>
+    <div class="contact">
+        <p class="Heading">Send Message Anonymously to Mr.Prabhat Kumar.</p>
+        <form name="Message">
+            <div>
+                <lable id="type" for="form-group">Type your Message in the below given Box.</lable><br>
+                <textarea name="Message" type="text" placeholder="If possible then do provide me any hint so that I can at least try to guess your name.
+                If you want reply to your message then do leave any thing(medium) by which I can contact you as soon as possible."
+                style="height:200px"></textarea>
+            </div>
+            <div id="Submission">
+              <input type="submit" class="Submit">
+            </div>
+            
+          </form>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxStNESdKp64iPANhClyOTD8jAvFer4Br0Llf9KjtzbxMYPlzIzvUJ5Pc1UFD7CCVLS/exec'
+        const form = document.forms['Message']
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+              form.reset()
+              alert('Your message has been sent successfully.')
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+  </body>
+</html>

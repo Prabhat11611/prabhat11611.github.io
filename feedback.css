@@ -1,0 +1,29 @@
+*{
+    margin:0%;
+    padding:0%;
+    font-size: 20px;
+    background-image: url("For Website/14.jpg");
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:45px;
+    text-align: center;
+    text-decoration: solid;
+}
+input[type=text],select, textarea {
+    width:100%; padding: 12px; border:1px solid blue; border-radius:4px; box-sizing:border-box;
+    margin-top:6px; margin-bottom: 16px; resize: vertical;
+}
+input[type=submit]{
+    background-color:aqua; color: white; padding:12px 20px; border: none; border-radius: 4px; cursor:pointer;
+}
+input[type=submit]{
+    font-weight: bolder;
+    color:blue;
+/***    background-color:rgb(0, 13, 255);       ***/
+}
+form{
+    background-color:rgb(56, 255, 215);
+    border-radius:5px;
+    padding:20px;
+}

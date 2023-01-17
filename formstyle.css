@@ -1,0 +1,32 @@
+/*#bg{
+    background-image: url('Image/wp3099482-cricket-bat-and-ball-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    <!--background-attachment: fixed;-->
+} */
+
+
+.heading{
+    border-style:dashed solid;
+    border-width:3px;
+    border-color:green;
+    text-align:center;
+    padding-top:4px;
+    padding-bottom: 4px;
+    color:red;
+    text-shadow: 5px 10px 20px red;
+}
+
+#last{
+    text-align:right;
+    color:red;
+    font-size:20px;
+}
+
+.text{
+    width:fit-content;
+    color:rgb(0, 102, 255);
+}
+h1{
+    font-size:50px;
+}

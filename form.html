@@ -1,0 +1,186 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="favimg/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favimg/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favimg/favicon-16x16.png">
+        <link rel="manifest" href="favimg/site.webmanifest">
+        <link rel="mask-icon" href="favimg/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        </head>
+        <style>
+            body {
+                background-color:bisque;
+            }
+        </style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            alert ("You are now moving to fill Cricket Regestration Form");
+        </script>
+        <h1 class="heading">
+            
+                CRICKET REGISTRATION FORM
+        </h1>
+        <marquee>Intreseted candidate should fill the form before 30/04/2022.</marquee>
+        <marquee direction="right"><pre>           Class teacher permission is necessary.          </pre></marquee>
+
+        <link rel="stylesheet" type="text/css" href="formstyle.css">
+
+    </head>
+    <body id="bg">
+        <form enctype="multipart/form-data" method="post" name="firstform">
+            <fieldset>
+                <legend><b>Basic Information</b></legend>
+                <lable for="yname">Name:</lable>
+                <input type="text" placeholder="Your Name"  size="50" name="Name" id="yname" required>
+            </fieldset>
+            <fieldset>
+                <lable for="fname">Father's Name:</lable>
+                <input type="text" placeholder="Your Father's Name" size="50" name="FatherName" id="fname" required>
+            </fieldset>
+            <fieldset>
+                <lable for="mname">Mother's Name: </lable>
+                <input type="text" placeholder="Your Mother's Name" size="50" name="MotherName" id="mname" required>
+            </fieldset>
+            <fieldset>
+                Select your Gender:
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female
+                <input type="radio" name="gender" value="other" required> Other
+            </fieldset>
+            <fieldset>
+                Enter your DOB
+                <input type="date" name="date_of_birth" required>
+            </fieldset>
+            <fieldset>
+            <lable for="pob">Place of Birth:</lable>
+            <input type="texT" size="50" name="Place_of_Birth" id="pob" placeholder="Enter your place of Birth">
+            </fieldset>
+            <fieldset>
+                City:
+                <input type="text" name="city" placeholder="Enter your City" required>
+
+                District:  
+                <input type="text" name="district" placeholder="Enter your District" required>
+
+                State:
+                <input type="text" name="state" placeholder="Enter your State" required>
+            </fieldset>
+            <fieldset>
+                Disability (if any):
+                <input type="text" name="disability" size="60">
+            </fieldset>
+            <fieldset>
+                Enter your School/College Name: 
+                <input type="textarea" name="school" size="80" required>
+            </fieldset><br><br>
+            <fieldset>
+            <legend><b>For website login</b></legend>
+                Enter your email id:
+                <input type="email" name="email_id" size="50" required>
+                <i>(You will use your Email Id for Website login.)</i>
+            </fieldset>
+            <fieldset>
+                Create your Password:
+                <input type="password" size="50" name="password" placeholder="Must use Alphabet, Special Char. & Digit" required>
+                <i>(Remember your password for Website login.)</i>
+            </fieldset>
+            <fieldset>
+                Enter your Mobile Number:
+                <input type="number" name="mobile_number" placeholder="Enter your current Number" required>
+            </fieldset><br>
+            <fieldset>
+                COLOUR: 
+                <input type="Color" name="color">
+                <pre>
+                <mark>Share your experience in Cricket</mark>
+                Give Rating as:
+                <b>
+                RED= International Level
+                BLUE= Natioinal
+                GREEN= District 
+                YELLOW= Fresher
+                </b>
+                </pre>
+            </fieldset><br>
+                
+                <fieldset>
+                    Your Position in CRICKET
+                    <select name="position">
+                        <option value="None" selected>None of these</option>
+                        <option value="Batsman">Batsman</option>
+                        <option value="Bowler">Bowler</option>
+                        <option value="Wicket_Keeper">Wicket Keeper</option>
+                    </select>
+                </fieldset><br>
+
+                
+                <fieldset>
+
+                    Upload your Best 3 Certificates of Previous played matches:<br>
+                    <b>
+                        <fieldseet>
+                            certificate 1:
+                            <input type="file" name="certificate1">
+                        </fieldseet>
+                     
+                    certificate 2:
+                    <input name="certificate2" type="file">
+                    certificate 3:
+                    <input name="certificate3" type="file">
+                    </b>
+                </fieldset><br> 
+                <fieldset>
+
+                    Enter the time of filling the form:
+                    <input name="time" type="time">
+                </fieldset>
+                <fieldset id="last">
+                    <pre>
+                    Reset Form: <input type="reset">           Submit Form: <input type="Submit" name="submit">
+                    </pre>
+                </fieldset>
+                <marquee class="moving">This form is not accepting certificates at present.</marquee>
+                <!--
+            <fieldset>
+                <pre>
+                                                                            Reset Form: <input type="reset">              Submit Form: <input type="submit">
+                </pre>
+            </fieldset>
+            -->
+        </form>
+        <!--
+        <script>
+        const scriptURL = ''
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL,{ method: 'POST', body:new FormData(form)})
+            .then(response => alert("Thanks for Contacting...!  I Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    -->
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzAWM5DHIaXQAdCWkz7eQA3ZcVQtJCk0XI8RXK69a-2E6Q0rDGvyJnt8brIw-tvwmU/exec'
+        const form = document.forms['firstform']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                form.reset()
+                alert('Your form has been submitted.')
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </body>
+</html>

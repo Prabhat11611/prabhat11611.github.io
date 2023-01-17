@@ -1,0 +1,101 @@
+*{
+    margin:0%;
+    padding:0%;
+    font-size: 20px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:45px;
+    text-align: center;
+    text-decoration: solid;
+}
+input[type=text],select, textarea {
+    width:100%; padding: 12px; border:1px solid blue; border-radius:4px; box-sizing:border-box;
+    margin-top:6px; margin-bottom: 16px; resize: vertical;
+}
+input[type=submit]{
+    background-color:aqua; color: white; padding:12px 20px; border: none; border-radius: 4px; cursor:pointer;
+}
+input[type=submit]{
+    background-color:rgb(102, 105, 201);
+}
+form{
+    background-color:rgb(73, 153, 234);
+    border-radius:5px;
+    padding:20px;
+}
+
+/*
+Javascript Code
+
+
+<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwT8E8uQsxMFX9oEf-rGtdCslqW5D-SyzsseDwDsSIFis13rQv50SE-078W50jtDE_u/exec'
+        const form = document.forms['QueryForm']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+
+
+
+      
+-------------console code to be put into GoogleSheeet------------
+
+
+var sheetName = 'Sheet1'
+var scriptProp = PropertiesService.getScriptProperties()
+
+function intialSetup () {
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+  scriptProp.setProperty('key', activeSpreadsheet.getId())
+}
+
+function doPost (e) {
+  var lock = LockService.getScriptLock()
+  lock.tryLock(10000)
+
+  try {
+    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+    var sheet = doc.getSheetByName(sheetName)
+
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+    var nextRow = sheet.getLastRow() + 1
+
+    var newRow = headers.map(function(header) {
+      return header === 'timestamp' ? new Date() : e.parameter[header]
+    })
+
+    sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  catch (e) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  finally {
+    lock.releaseLock()
+  }
+}
+
+
+
+
+*/
+
+
+/* Deployment ID
+AKfycbwUB3i74ThIo8pInANItadR9lhZaCqPadRB6M8poiDVDBC4gBbMTYJTdQbcz7mLNTjD4Q
+*/

@@ -1,0 +1,64 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+
+body{
+    background-color:aqua;
+    animation-name: display;
+    animation-duration:10s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction:alternate-reverse;
+}
+@keyframes display{
+        0% {background-color:rgb(76, 244, 244);}
+        20% {background-color:rgb(248, 125, 81);}
+        40% {background-color:rgb(65, 65, 248);}
+        60% {background-color:rgb(249, 54, 54);}
+        80% {background-color:rgb(102, 251, 184);}
+        100% {background-color:rgb(248, 95, 200);}
+}
+.layout{
+    width:600px;
+    margin:auto;
+}
+h2{
+    color:blue;
+    font-size:50px;
+    text-align:center;
+    text-shadow:5px 1px 6px rgb(255, 0, 0);
+    padding-top:20px;
+    padding-bottom:30px;
+}
+.accordion{
+    padding: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    background-color:yellow;
+    border-radius:10px;
+}
+.accordion__question p{
+    margin:5px;
+    padding:0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+}
+.accordion__answer p{
+    margin:5px;
+    padding:10px;
+    font-size:large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(86, 40, 237);
+    background-color:rgb(255, 255, 255);
+    border-radius:10px;
+}
+.accordion:hover{
+    cursor:pointer;
+}
+.accordion__answer{
+    display:none;
+}
+.accordion.active .accordion__answer{
+    display:block;
+}

@@ -1,0 +1,74 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+
+.centerdiv{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+a{
+    height:100px;
+    width: 100px; background-color:#f5f6fa;
+    margin:10px; text-align:center;
+    border-radius: 50px;
+    box-shadow:1px 4px 2px 2px #dcdde1;
+    line-height:110px; position:relative;
+    /*overflow:hidden is used to hide the outer part of the animation, it(overflow) is the last part of 
+    the animation. So first complete whole code and then come to overflow.*/
+    overflow:hidden;
+}
+.fa-instagram{
+    color:#d32177;
+}
+.fa-whatsapp{
+    color:#34B7F1;
+}
+.fa-facebook{
+    color:#3b5998;
+}
+.fa-twitter{
+    color:#00acee;
+}
+.fa-linkedin{
+    color:#0077b5;
+}
+a:hover .fa{
+    /*to make the icon zoom out when cursor moves on it*/
+    transform: scale(1.5);
+    color:#f5f6fa;
+}
+a i{
+    transition: all 0.3s linear;
+}
+
+/*to work before the actual content we use "bfore"*/
+a:before{
+    content:"";
+    width: 120%; height:120%;
+    position: absolute;
+    /*Now since here we have used the position to absolute so we have to give the postion of Parent by Relative*/
+    top: 90%; left:-50%;
+    background-color:rgb(42, 234, 16);
+    transform:rotate(60deg);
+}
+
+/*Now we need to state that when the animation will complete itself completely.*/
+
+a:hover:before{
+    /*animation: (any_name) (time_taken_to_complete) (number_of_times_animation_to_be_performed)*/
+    animation: socialicons 0.8s 1;
+    /*animation fill mode to make our animation to stay at the position and do not come back to original postion
+    until mouse is displayed from the icon.*/
+    animation-fill-mode:forwards;
+}
+/*Whenever we use animation we need to give keyframes
+@keyframes (name of animation)    */
+@keyframes socialicons{
+    /*at 0% I want the icon to animated as---*/
+    0% {top: 90%; left:-50%;}
+    50% {top:-60%; left:-10%;}
+    100% {top:-10%; left:-10%;}
+}
